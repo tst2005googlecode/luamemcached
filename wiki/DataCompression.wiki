@@ -21,19 +21,14 @@ end)
 
 m:set_compress(function(str)
     local buffer = {}
-    print(str)
 
     local z = zlib.deflate(function(d)
-        print(string.len(d))
         table.insert(buffer, d)
     end, nil, nil, 15 + 16)
 
     z:write(str)
     z:close()
 
-    fh:write(table.concat(buffer))
-
-    print(table.concat(buffer))
     return table.concat(buffer)
 end)
 
