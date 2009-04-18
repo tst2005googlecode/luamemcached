@@ -1,0 +1,3 @@
+#summary Serialisation of table structures for storage in Memcached
+
+== Summary ==
