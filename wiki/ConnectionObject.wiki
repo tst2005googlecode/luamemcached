@@ -64,29 +64,25 @@ Runs the memcached "flush_all" command on all configured hosts, emptying all the
 === memcache:disconnect_all() ===
 Closes all cached sockets to all memcached servers.
 
-memcache:set_hash(hashfunc)
+=== memcache:set_hash(hashfunc) ===
 Sets a custom hash function for key values. The default is a CRC32 hashing function.
 'hashfunc' should be defined receiving a single string parameter and returing a single integer value.
 
-memcache:set_encode(func)
+==== memcache:set_encode(func) ====
 Sets a custom encode function for serialising table values. 'func' should be defined receiving a single
 table value and returning a single string value.
 
-memcache:set_decode(func)
-Sets a custom decode function for deserialising table values. 'func' should be defined receiving a
-single single and returning a single table value.
+==== memcache:set_decode(func) ====
+Sets a custom decode function for deserialising table values. 'func' should be defined receiving a single single and returning a single table value.
 
-memcache:enable_compression(onflag)
+==== memcache:enable_compression(onflag) ====
 Turns data compression support on or off.
 
-memcache:set_compress_theshold(size)
-Set the compression threshold. If the value to be stored is larger than `size' bytes (and compression
-is enabled), compress before storing.
+==== memcache:set_compress_threshold(size) ====
+Set the compression threshold. If the value to be stored is larger than `size' bytes (and compression is enabled), compress before storing.
 
-memcache:set_compress(func)
-Sets a custom data compression function. 'func' should be defined receiving a single string value and
-returning a single string value.
+==== memcache:set_compress(func) ====
+Sets a custom data compression function. 'func' should be defined receiving a single string value and returning a single string value.
 
-memcache:set_decompress(func)
-Sets a custom data decompression function. 'func' should be defined receiving a single string value and
-returning a single string value.
+==== memcache:set_decompress(func) ====
+Sets a custom data decompression function. 'func' should be defined receiving a single string value and returning a single string value.
