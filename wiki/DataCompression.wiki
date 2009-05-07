@@ -36,4 +36,4 @@ end)
 m:enable_compression(true)
 }}}
 
-*Please note* this requires the [http://luaforge.net/projects/lzlib/ lzlib] Lua module to be installed.
+*Please note* this requires the [http://luaforge.net/projects/lzlib/ lzlib] version 0.4 Lua module to be installed.
